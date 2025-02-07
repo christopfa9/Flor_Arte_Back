@@ -1,0 +1,21 @@
+INSERT INTO tag (id, name) VALUES (1, 'navidad');
+INSERT INTO tag (id, name) VALUES (2, 'día de la madre');
+INSERT INTO tag (id, name) VALUES (3, 'verano');
+INSERT INTO tag (id, name) VALUES (4, 'regalo');
+INSERT INTO tag (id, name) VALUES (5, 'día de san valentín');
+INSERT INTO tag (id, name) VALUES (6, 'cumpleaños');
+INSERT INTO tag (id, name) VALUES (7, 'aniversario');
+INSERT INTO tag (id, name) VALUES (8, 'boda');
+INSERT INTO tag (id, name) VALUES (9, 'felicitaciones');
+INSERT INTO tag (id, name) VALUES (10, 'sentido pésame');
+INSERT INTO tag (id, name) VALUES (11, 'que te mejores');
+INSERT INTO tag (id, name) VALUES (12, 'nuevo bebé');
+INSERT INTO tag (id, name) VALUES (13, 'gracias');
+INSERT INTO tag (id, name) VALUES (14, 'graduación');
+INSERT INTO tag (id, name) VALUES (15, 'pascua');
+INSERT INTO tag (id, name) VALUES (16, 'acción de gracias');
+INSERT INTO tag (id, name) VALUES (17, 'primavera');
+INSERT INTO tag (id, name) VALUES (18, 'otoño');
+INSERT INTO tag (id, name) VALUES (19, 'romántico');
+
+ALTER SEQUENCE tag_seq RESTART WITH 25;

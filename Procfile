@@ -1,0 +1,1 @@
+web: java -jar build/libs/tango-0.0.1.jar

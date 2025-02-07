@@ -1,0 +1,38 @@
+name: tango
+networks:
+  tango-network: # Network name.
+    name: tango_network
+    ipam: # IP Address Manager (ipam).
+      config:
+        - subnet: 192.168.200.0/28 # Range of addresses a container/service inside the network might have.
+services:
+  tango-db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=tango-db
+      - POSTGRES_USER=tango-db-user
+    ports:
+      - 5432:5432
+    volumes:
+      - tango_dbdata:/var/lib/postgresql/data
+    networks:
+      tango-network:
+        ipv4_address: 192.168.200.2
+  tango-pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 80:80
+    environment:
+      - PGADMIN_DEFAULT_PASSWORD=123
+      - PGADMIN_DEFAULT_EMAIL=user@mail.com
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      tango-network:
+        ipv4_address: 192.168.200.3
+volumes:
+  tango_dbdata:
+    name: tango_dbdata
+  pgadmin_data:
+    name: pgadmin_data
